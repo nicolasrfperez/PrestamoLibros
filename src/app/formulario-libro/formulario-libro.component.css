@@ -1,0 +1,19 @@
+.jumbotron{
+    background-image: url(./books.jpg);
+    background-size: cover;
+    opacity: 90;
+}
+.title{
+    text-align: center;
+    color: #f4d58d;
+    margin: 12px;
+}
+
+.formulario{
+    text-align: center;
+    color: azure
+}
+
+.btn{
+    margin: 10px;
+}

@@ -1,0 +1,30 @@
+<h2 class="title">Listado de libros prestados</h2>
+<div class="lista">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Autor</th>
+                <th>Género</th>
+                <th>Prestado a</th>
+                <th> </th>
+                
+
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let item of libroPrestado">
+                <td>{{item.name}}</td>
+                <td>{{item.author}}</td>
+                <td>{{item.gender}}</td>
+                <td><input type="text" name="lended" id="{{item.id}}" [value]="item.lended"></td>
+                <td><button class="btn btn-danger" (click)="aListado(item.id)">Devolver</button></td>
+                                
+                
+                
+
+            </tr>
+        </tbody>
+    </table>
+</div>

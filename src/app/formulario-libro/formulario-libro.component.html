@@ -1,0 +1,22 @@
+<div class="jumbotron">
+    <h2 class="title">Ingresar nuevo libro</h2>
+
+    <form class="formulario form-inline  justify-content-center" (ngSubmit)="guardar()">
+        
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" [(ngModel)]="libro.name">
+
+        <label for="author">Autor</label>
+        <input type="text" name="author" id="author" [(ngModel)]="libro.author">
+
+        <label for="lended">Prestar a</label>
+        <input type="text" name="lended" id="lended" [(ngModel)]="libro.lended">
+
+        <label for="gender">Género</label>
+        <select name="gender" id="gender" [(ngModel)]="libro.gender">
+            <option *ngFor="let generosLibros of generos" [value]="generosLibros.id">{{generosLibros.genero}}</option>
+        </select>
+
+        <button type="submit" class="btn btn-sm btn-primary">Agregar</button>
+    </form>
+</div>
